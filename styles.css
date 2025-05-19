@@ -41,8 +41,8 @@ html, body {
 
 .left-box {
   display: flex;
-  align-items: center;  
-  height: 100vh;         
-  justify-content: flex-start; 
-  padding-left: 20px;
+  align-items: center;   /* vertical center */
+  height: 100vh;         /* full viewport height */
+  justify-content: flex-start; /* align left horizontally */
+  padding-left: 20px;  
 }
