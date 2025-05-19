@@ -1,9 +1,13 @@
 body {
   background-color: #f0f0f0;
-  font-family: 'Arial', sans-serif;
-  color: #336699;
+  font-family: 'Tahoma', sans-serif;
+  color: #132639;
 }
 
 h1 {
   color: #;
+}
+
+.centered {
+  text-align: center;
 }
