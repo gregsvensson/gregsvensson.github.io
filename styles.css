@@ -33,7 +33,7 @@ html, body {
   z-index: 1000;
   background-color: #1a1a1a;   /* Background color */
   color: white;                /* Text color */
-  padding: 40;               /* Space inside */
+  padding: 100,100,100;               /* Space inside */
   text-align: center;          /* Center the title */
   margin: 0 ;
 }
