@@ -33,9 +33,9 @@ h1 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #0077cc;   /* Background color */
+  background-color: #f9f9f9;   /* Background color */
   color: white;                /* Text color */
-  padding: 20px;               /* Space inside */
+  padding: 20, 0;               /* Space inside */
   text-align: center;          /* Center the title */
-  margin-bottom: 20px;
+  margin: 0 ;
 }
