@@ -28,3 +28,14 @@ h1 {
   margin: 50px auto;            /* Center the box horizontally */
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow (optional) */
 }
+
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #0077cc;   /* Background color */
+  color: white;                /* Text color */
+  padding: 20px;               /* Space inside */
+  text-align: center;          /* Center the title */
+  margin-bottom: 20px;
+}
