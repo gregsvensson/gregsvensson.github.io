@@ -16,19 +16,19 @@ body {
 }
 
 .text-box {
-  border: 2px solid #f9f9f9;       /* Box border */
-  background-color: #f9f9f9;    /* Light background */
+  background-color: #1a1a1a;    /* Light background */
   padding: 20px;                /* Space inside the box */
   width: 1000px;                 /* Box width */
   margin: 50px auto;            /* Center the box horizontally */
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Soft shadow (optional) */
+  color: white;
 }
 
 .page-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #f9f9f9;   /* Background color */
+  background-color: #1a1a1a;   /* Background color */
   color: white;                /* Text color */
   padding: 20, 0;               /* Space inside */
   text-align: center;          /* Center the title */
