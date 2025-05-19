@@ -1,6 +1,9 @@
-body {
+html, body {
   background-color: rgb(15, 15, 95);
   font-family: 'Tahoma', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .centered {
@@ -30,7 +33,7 @@ body {
   z-index: 1000;
   background-color: #1a1a1a;   /* Background color */
   color: white;                /* Text color */
-  padding: 20, 0;               /* Space inside */
+  padding: 40;               /* Space inside */
   text-align: center;          /* Center the title */
   margin: 0 ;
 }
