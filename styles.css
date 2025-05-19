@@ -1,11 +1,6 @@
 body {
-  background-color: rgb(140, 140, 140);
+  background-color: rgb(15, 15, 110);
   font-family: 'Tahoma', sans-serif;
-  color: #132639;
-}
-
-h1 {
-  color: #;
 }
 
 .centered {
@@ -13,11 +8,11 @@ h1 {
 }
 
 .big-text {
-  font-size: 36px;
+  font-size: 44px;
 }
 
 .body-text {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .text-box {
