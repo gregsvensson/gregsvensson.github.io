@@ -10,6 +10,8 @@ img {
   max-width: 100%; /* fills its container */
   height: auto;
   display: block;
+  margin: 0 auto;     /* centers the image horizontally */
+
 }
 
 .centered {
