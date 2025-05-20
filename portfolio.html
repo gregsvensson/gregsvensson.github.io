@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Greg Svensson - Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #000;
+      color: #eee;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+    .projects-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .project-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+    }
+    .project-image {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      height: 180px;
+      background: #333; /* fallback background */
+    }
+    .project-title {
+      font-size: 1.5rem;
+      margin: 0 0 10px 0;
+      color: #66ccff;
+    }
+    .project-description {
+      flex-grow: 1;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+    .project-links a {
+      color: #66ccff;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
 
+  <h1>Projects</h1>
+
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="project1.jpg" alt="Project 1 Screenshot" class="project-image" />
+      <h2 class="project-title">Electric Vehicle Drivetrain Design</h2>
+      <p class="project-description">
+        Designed and modeled a custom electric drivetrain system using Fusion 360, focusing on efficiency and weight reduction. Applied CAD skills and mechanical knowledge to create a compact layout optimized for Baja racing.
+      </p>
+      <div class="project-links">
+        <a href="#">View Report</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="project2.jpg" alt="Project 2 Screenshot" class="project-image" />
+      <h2 class="project-title">Solar-Powered Water Distribution System</h2>
+      <p class="project-description">
+        Contributed to the design of a solar-powered water distribution system for a rural school in Eswatini. Learned AutoCAD and collaborated with a multi-disciplinary team to create effective, sustainable infrastructure.
+      </p>
+      <div class="project-links">
+        <a href="#">Project Summary</a>
+      </div>
+    </div>
+
+    <!-- Add more project cards here -->
+
+  </div>
+
+</body>
+</html>
