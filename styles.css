@@ -6,7 +6,7 @@ html, body {
 }
 
 img {
-  max-width: 20%;    /* fits inside container */
+  max-width: 1%;    /* fits inside container */
   height: auto;
   display: block;     /* removes bottom spacing */
 }
