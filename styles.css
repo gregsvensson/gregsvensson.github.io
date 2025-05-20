@@ -5,6 +5,10 @@ html, body {
   box-sizing: border-box;
 }
 
+head {
+  margin: 0;
+}
+
 img {
   max-width: 100%; /* fills its container */
   height: auto;
