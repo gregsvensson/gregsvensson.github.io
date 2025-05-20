@@ -3,12 +3,13 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  padding-top: 150px;
 }
 
 img {
-  max-width: 1%;    /* fits inside container */
+  max-width: 100%; /* fills its container */
   height: auto;
-  display: block;     /* removes bottom spacing */
+  display: block;
 }
 
 .centered {
@@ -35,13 +36,16 @@ img {
 }
 
 .page-header {
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%; /* make it span the full width */
   z-index: 1000;
-  background-color: #1a1a1a;   /* Background color */
-  color: white;                /* Text color */
-  padding: 50px 0;               /* Space inside */
-  text-align: center;          /* Center the title */
-  margin: 0 ;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  margin: 0;
 }
 
 
