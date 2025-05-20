@@ -38,7 +38,7 @@ img {
 }
 
 .page-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%; /* make it span the full width */
