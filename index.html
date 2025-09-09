@@ -4,101 +4,82 @@
   <meta charset="UTF-8">
   <title>Greg Svensson</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-    }
-
-    /* Header / nav bar */
-    header {
       background-color: #111;
-      padding: 25px 40px;   /* larger padding = taller header */
+      color: #eee;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      height: 100vh; /* full viewport */
     }
 
-    header h1 {
-      margin: 0;
-      color: white;
-      font-size: 2.4rem;   /* bigger name */
+    .card {
+      text-align: center;
+      max-width: 700px;
+      padding: 40px;
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
     }
 
-    nav ul {
+    .card h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .card img {
+      width: 220px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #444;
+    }
+
+    .card p {
+      line-height: 1.6;
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+
+    .links {
       list-style: none;
-      margin: 0;
       padding: 0;
       display: flex;
-      gap: 30px;  /* more space between links */
+      justify-content: center;
+      gap: 25px;
     }
 
-    nav a {
-      color: #eee;
+    .links a {
+      color: #66ccff;
       text-decoration: none;
+      font-size: 1.1rem;
       font-weight: 500;
-      font-size: 1.2rem;  /* bigger links */
     }
 
-    nav a:hover {
+    .links a:hover {
       text-decoration: underline;
-    }
-
-    /* Profile container */
-    .profile-container {
-      display: flex;
-      align-items: flex-start;
-      padding: 60px;  /* more breathing room */
-      max-width: 1100px;
-      margin: auto;
-      gap: 40px;
-    }
-
-    .profile-image {
-      width: 300px;  /* bigger photo */
-      height: auto;
-      border-radius: 12px;
-    }
-
-    .info-box {
-      flex: 1;
-    }
-
-    .body-text {
-      line-height: 1.8;
-      font-size: 1.05rem;
-      margin-bottom: 20px;
     }
   </style>
 </head>
-
 <body>
 
-  <header>
+  <div class="card">
     <h1>Greg Svensson</h1>
-    <nav>
-      <ul>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/greg-svensson-2b920a2a7/">LinkedIn</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="profile-container">
-    <img class="profile-image" src="portrait.jpg" alt="photo">
-
-    <div class="info-box">
-      <p class="body-text">
-        Third year Mechanical and Aerospace Engineering student at Cornell University.
-        Drivetrain subteam member on Cornell Baja Racing, experienced in a number of CAD softwares.
-        Interested in automotive, energy, and aerospace industries. Skilled in problem-solving and interpersonal relations, 
-        possessing excellent communication and team support abilities. Strong hands-on and mechanical design experience through academic projects and team-based engineering work, 
-        with a passion for creating practical, high-performance solutions in challenging environments. Highly organized, detail-oriented, and committed to team success.
-      </p>
-    </div>
+    <img src="portrait.jpg" alt="Greg Svensson photo">
+    <p>
+      Third year Mechanical and Aerospace Engineering student at Cornell University.  
+      Drivetrain subteam member on Cornell Baja Racing, experienced in a number of CAD softwares.  
+      Interested in automotive, energy, and aerospace industries. Strong hands-on and mechanical design experience, with a passion for creating practical, high-performance solutions.
+    </p>
+    <ul class="links">
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="#">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/greg-svensson-2b920a2a7/">LinkedIn</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
   </div>
 
 </body>
