@@ -1,37 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Greg Svensson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
 
+    /* Header / nav bar */
+    header {
+      background-color: #111;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  <head>
-    <title>Greg Svensson</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
+    header h1 {
+      margin: 0;
+      color: white;
+      font-size: 1.8rem;
+    }
 
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Profile container */
+    .profile-container {
+      display: flex;
+      align-items: flex-start;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      gap: 30px;
+    }
+
+    .profile-image {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .info-box {
+      flex: 1;
+    }
+
+    .body-text {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
 
 <body>
-  <h1 class="centered page-header big-text">Greg Svensson</h1>
 
-  <div class="profile-container">
-    <img class="profile-image" src="portrait.jpg" alt="photo">
-    
-    <div class="info-box">
-      <p class="body-text">
-       Third year Mechanical and Aerospace Engineering student at Cornell University.
-        Drivetrain subteam member on Cornell Baja Racing, experienced in a number of CAD softwares.
-        Interested in automotive, energy, and aerospace industries. Skilled in problem-solving and interpersonal relations, 
-        possessing excellent communication and team support abilities. Strong hands-on and mechanical design experience through academic projects and team-based engineering work, 
-        with a passion for creating practical, high-performance solutions in challenging environments. Highly organized, detail-oriented, and committed to team success. <br>
-      </p>
-      <ul class="link-list">
+  <header>
+    <h1>Greg Svensson</h1>
+    <nav>
+      <ul>
         <li><a href="portfolio.html">Projects</a></li>
         <li><a href="#">Resume</a></li>
         <li><a href="https://www.linkedin.com/in/greg-svensson-2b920a2a7/">LinkedIn</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
+    </nav>
+  </header>
+
+  <div class="profile-container">
+    <img class="profile-image" src="portrait.jpg" alt="photo">
+
+    <div class="info-box">
+      <p class="body-text">
+        Third year Mechanical and Aerospace Engineering student at Cornell University.
+        Drivetrain subteam member on Cornell Baja Racing, experienced in a number of CAD softwares.
+        Interested in automotive, energy, and aerospace industries. Skilled in problem-solving and interpersonal relations, 
+        possessing excellent communication and team support abilities. Strong hands-on and mechanical design experience through academic projects and team-based engineering work, 
+        with a passion for creating practical, high-performance solutions in challenging environments. Highly organized, detail-oriented, and committed to team success.
+      </p>
     </div>
   </div>
+
 </body>
-
-
 </html>
