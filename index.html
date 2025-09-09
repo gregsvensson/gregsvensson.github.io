@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html>
-
-
-  <head>
-    <title>Greg Svensson</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+</head>
 
 <body>
-  <h1 class="centered page-header big-text">Greg Svensson</h1>
 
-  <div class="profile-container">
-    <img class="profile-image" src="portrait.jpg" alt="photo">
-    
-    <div class="info-box">
-      <p class="body-text">
-       Third year Mechanical and Aerospace Engineering student at Cornell University.
-        Drivetrain subteam member on Cornell Baja Racing, experienced in a number of CAD softwares.
-        Interested in automotive, energy, and aerospace industries. Skilled in problem-solving and interpersonal relations, 
-        possessing excellent communication and team support abilities. Strong hands-on and mechanical design experience through academic projects and team-based engineering work, 
-        with a passion for creating practical, high-performance solutions in challenging environments. Highly organized, detail-oriented, and committed to team success. <br>
-      </p>
-      <ul class="link-list">
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/greg-svensson-2b920a2a7/">LinkedIn</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark text-white";>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == '/projects/' %}active{% endif %}" href="{{ "/projects/" | relative_url }}">Projects</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == '/cv/' %}active{% endif %}" href="{{ "/cv/" | relative_url }}">CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="footer navbar-dark text-white text-center";>
+    <div class="container">
+      &copy; 2024 {{ site.name }}. All rights not reserved.
     </div>
-  </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-
 </html>
