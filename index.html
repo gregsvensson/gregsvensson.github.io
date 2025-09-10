@@ -1,94 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Greg Svensson</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #111;
-      color: #eee;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* full screen center */
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('14.jpeg'); /* your image file */
+    background-size: cover;        /* make it cover the whole screen */
+    background-position: center;   /* center the image */
+    background-repeat: no-repeat;  /* prevent tiling */
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
-    .card {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      max-width: 1000px;
-      padding: 30px;
-      background-color: #1c1c1c;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    }
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    padding: 30px;
+    background-color: rgba(28, 28, 28, 0.85); /* semi-transparent overlay */
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+  }
 
-    .card img {
-      width: 400px;   /* bigger photo */
-      height: auto;
-      border-radius: 8px; /* subtle rounding */
-      border: 3px solid #444;
-    }
+  .card img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #444;
+  }
 
-    .info {
-      flex: 1;
-    }
+  .info {
+    flex: 1;
+  }
 
-    .info h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
+  .info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
 
-    .info p {
-      line-height: 1.6;
-      margin-bottom: 25px;
-      font-size: 1rem;
-    }
+  .info p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 1rem;
+  }
 
-    .links {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
+  .links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
 
-    .links a {
-      color: #66ccff;
-      text-decoration: none;
-      font-size: 1.3rem; /* larger link text */
-      font-weight: 600;
-    }
+  .links a {
+    color: #66ccff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
 
-    .links a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="card">
-    <img src="portrait.jpg" alt="Greg Svensson photo">
-    <div class="info">
-      <h1>Greg Svensson</h1>
-      <p>
-        Third year Mechanical and Aerospace Engineering student at Cornell University.  
-        Drivetrain subteam member on Cornell Baja Racing, experienced in a number of CAD softwares.  
-        Interested in automotive, energy, and aerospace industries. Strong hands-on and mechanical design experience, 
-        with a passion for creating practical, high-performance solutions.
-      </p>
-      <ul class="links">
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="Greg Svensson Resume.pdf">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/greg-svensson-2b920a2a7/">LinkedIn</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-
-</body>
-</html>
+  .links a:hover {
+    text-decoration: underline;
+  }
+</style>
