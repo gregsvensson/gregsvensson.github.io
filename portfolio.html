@@ -26,7 +26,7 @@
 
     header h1 {
       margin: 0;
-      font-size: 2rem; /* same as index page */
+      font-size: 2rem;
       font-weight: 700; /* bold */
     }
 
@@ -58,7 +58,7 @@
 
     /* Page content */
     .content {
-      max-width: 900px;
+      max-width: 1200px; /* increased width */
       margin: 20px auto 40px;
       padding: 0 20px;
     }
@@ -74,7 +74,7 @@
     .page-description {
       text-align: center;
       font-size: 1.2rem;
-      margin-bottom: 30px; /* smaller gap above projects */
+      margin-bottom: 30px;
       color: #ccc;
       font-weight: 300;
     }
@@ -92,6 +92,7 @@
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0,0,0,0.7);
       overflow: hidden;
+      min-height: 250px; /* taller cards */
     }
 
     .project-card:nth-child(even) {
@@ -100,7 +101,7 @@
 
     .project-card img {
       width: 50%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -109,7 +110,7 @@
       padding: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start; /* align text at top */
     }
 
     .project-title {
@@ -145,6 +146,7 @@
       }
       .project-card img {
         width: 100%;
+        height: auto;
       }
     }
   </style>
@@ -212,7 +214,7 @@
       </div>
 
       <div class="project-card">
-        <img src=".." alt="Steam Engine" />
+        <img src="steamengine.jpg" alt="Steam Engine" />
         <div class="project-text">
           <h2 class="project-title">Steam Engine</h2>
           <p class="project-description">
