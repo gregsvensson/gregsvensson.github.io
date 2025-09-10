@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Greg Svensson - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       background-color: #000;
       color: #eee;
-      font-family: 'Calibri', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 20px;
       box-sizing: border-box;
@@ -18,12 +18,15 @@
       text-align: center;
       font-size: 3rem;
       margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
     .page-description {
       text-align: center;
       font-size: 1.2rem;
       margin-bottom: 40px;
       color: #ccc;
+      font-weight: 300;
     }
     .projects-container {
       max-width: 800px;
@@ -35,38 +38,40 @@
     .project-card {
       background-color: #1a1a1a;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
       display: flex;
       flex-direction: column;
     }
-
     .project-image {
       width: 100%;
       height: auto;
-      border-radius: 6px;
+      border-radius: 8px;
       margin-bottom: 15px;
       background: #333;
       object-fit: contain;
     }
-    
     .project-title {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin: 0 0 10px 0;
       color: white;
+      font-weight: 600;
     }
     .project-description {
       font-size: 1rem;
       margin-bottom: 15px;
-      line-height: 1.4;
+      line-height: 1.5;
+      font-weight: 300;
     }
     .project-links a {
       color: #66ccff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       margin-right: 15px;
+      transition: color 0.2s;
     }
     .project-links a:hover {
+      color: #99ddff;
       text-decoration: underline;
     }
   </style>
@@ -78,7 +83,6 @@
 
   <div class="projects-container">
 
-    <!-- Blank project card above -->
     <div class="project-card">
       <img src="Driving.jpg" alt="Baja Car" class="project-image" />
       <h2 class="project-title">Four-Wheel Drive Driveshaft</h2>
@@ -94,26 +98,24 @@
       <img src="guardingfull.png" alt="4WD Guarding" class="project-image" />
       <h2 class="project-title">Four-Wheel Drive Guarding</h2>
       <p class="project-description">
-        Designed a rules-compliant, drivetrain guarding system using SolidWorks for Cornell Baja Racing's TG21 car. Design focused on part serviciability and weight reduction. Personally mnufactured all components by hand, in house.
+        Designed a rules-compliant, drivetrain guarding system using SolidWorks for Cornell Baja Racing's TG21 car. Design focused on part serviceability and weight reduction. Personally manufactured all components by hand, in house.
       </p>
       <div class="project-links">
         <a href="gas273_4WDGuarding_SP25.pdf" target="_blank" >Technical Report</a>
       </div>
     </div>
 
-
     <div class="project-card">
       <img src="IMG_1402.jpg" alt="Caliper Bracket" class="project-image" />
       <h2 class="project-title">Custom Caliper Brackets</h2>
       <p class="project-description">
-        Designed and manufactured custom caliper mounting brackets for a restored 1988 Chevrolet Camero.
+        Designed and manufactured custom caliper mounting brackets for a restored 1988 Chevrolet Camaro.
       </p>
       <div class="project-links">
         <a href="" target="_blank" >Learn More</a>
       </div>
     </div>
 
-    <!-- Blank project card below -->
     <div class="project-card">
       <img src=".." alt="Steam Engine" class="project-image" />
       <h2 class="project-title">Steam Engine</h2>
@@ -124,8 +126,6 @@
         <a href="#" target="_blank">Learn More</a>
       </div>
     </div>
-      
-
 
   </div>
 
