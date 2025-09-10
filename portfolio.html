@@ -17,7 +17,13 @@
     h1 {
       text-align: center;
       font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .page-description {
+      text-align: center;
+      font-size: 1.2rem;
       margin-bottom: 40px;
+      color: #ccc;
     }
     .projects-container {
       max-width: 1000px;
@@ -41,7 +47,7 @@
       border-radius: 6px;
       margin-bottom: 15px;
       background: #333;
-      object-fit: contain; /* optional: ensures it fits nicely if you re-add height later */
+      object-fit: contain;
     }
     
     .project-title {
@@ -69,8 +75,22 @@
 <body>
 
   <h1>Projects</h1>
+  <p class="page-description">A collection of engineering and design projects showcasing my skills in mechanical design, fabrication, and problem solving.</p>
 
   <div class="projects-container">
+
+    <!-- Blank project card above -->
+    <div class="project-card">
+      <img src="" alt="Project Screenshot" class="project-image" />
+      <h2 class="project-title">Project Title</h2>
+      <p class="project-description">
+        Project description goes here.
+      </p>
+      <div class="project-links">
+        <a href="#" target="_blank">Technical Report</a>
+      </div>
+    </div>
+
     <div class="project-card">
       <img src="guardingfull.png" alt="Project 1 Screenshot" class="project-image" />
       <h2 class="project-title">Four-Wheel Drive Guarding</h2>
@@ -82,7 +102,17 @@
       </div>
     </div>
 
-    <!-- Add more project cards here -->
+    <!-- Blank project card below -->
+    <div class="project-card">
+      <img src="" alt="Project Screenshot" class="project-image" />
+      <h2 class="project-title">Project Title</h2>
+      <p class="project-description">
+        Project description goes here.
+      </p>
+      <div class="project-links">
+        <a href="#" target="_blank">Technical Report</a>
+      </div>
+    </div>
 
   </div>
 
