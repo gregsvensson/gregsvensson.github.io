@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Greg Svensson</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       overflow: hidden;
       height: 100vh;
       display: flex;
@@ -31,13 +31,13 @@
 
     .scroll-container img {
       width: 100%;
-      height: 100vh; /* each image fills viewport */
+      height: 100vh;
       object-fit: cover;
     }
 
     @keyframes scrollUp {
       0% { transform: translateY(0); }
-      100% { transform: translateY(-500vh); } /* 5 images × 100vh each */
+      100% { transform: translateY(-500vh); }
     }
 
     /* Main card */
@@ -48,15 +48,15 @@
       max-width: 1000px;
       padding: 30px;
       background-color: rgba(28, 28, 28, 0.85);
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      border-radius: 16px;
+      box-shadow: 0 0 35px rgba(0,0,0,0.6);
       z-index: 1;
     }
 
     .card img {
-      width: 400px;
+      width: 380px;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       border: 3px solid #444;
     }
 
@@ -65,14 +65,17 @@
     }
 
     .info h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
     }
 
     .info p {
-      line-height: 1.6;
-      margin-bottom: 25px;
-      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+      font-size: 1.05rem;
+      font-weight: 300;
     }
 
     .links {
@@ -86,11 +89,13 @@
     .links a {
       color: #66ccff;
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 600;
+      transition: color 0.2s;
     }
 
     .links a:hover {
+      color: #99ddff;
       text-decoration: underline;
     }
 
@@ -105,7 +110,6 @@
     <img src="IMG_1216.jpeg" alt="">
     <img src="IMG_1362.jpeg" alt="">
     <img src="IMG_1213.jpeg" alt="">
-    <!-- Duplicate first image for seamless loop -->
     <img src="5C676182-5445-48FF-8C8E-C61F527298D1.jpeg" alt="">
   </div>
 
