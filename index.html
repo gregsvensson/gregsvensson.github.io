@@ -44,38 +44,29 @@
     .card {
       display: flex;
       align-items: center;
-      gap: 40px;
-      max-width: 1000px;
-      padding: 30px;
+      gap: 50px;
+      max-width: 1400px;   /* increased width */
+      width: 90%;          /* make it responsive to viewport */
+      padding: 40px;
       background-color: rgba(28, 28, 28, 0.85);
-      border-radius: 16px;
-      box-shadow: 0 0 35px rgba(0,0,0,0.6);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.7);
       z-index: 1;
     }
-
+    
     .card img {
-      width: 380px;
+      width: 450px;   /* larger portrait image */
       height: auto;
-      border-radius: 10px;
+      border-radius: 12px;
       border: 3px solid #444;
     }
-
-    .info {
-      flex: 1;
-    }
-
+    
     .info h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-      letter-spacing: 1px;
+      font-size: 3rem;  /* slightly larger */
     }
-
+    
     .info p {
-      line-height: 1.7;
-      margin-bottom: 28px;
-      font-size: 1.05rem;
-      font-weight: 300;
+      font-size: 1.15rem;
     }
 
     .links {
