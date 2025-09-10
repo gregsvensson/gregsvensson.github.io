@@ -16,6 +16,48 @@
       color: #eee;
     }
 
+    /* Navigation bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(20, 20, 20, 0.9);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between; /* name left, links right */
+      align-items: center;
+      z-index: 10;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .nav-left {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #eee;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #66ccff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #99ddff;
+      text-decoration: underline;
+    }
+
     /* Container for the scrolling images */
     .scroll-container {
       position: fixed;
@@ -43,56 +85,55 @@
     /* Main card */
     .card {
       display: flex;
-      align-items: center;
-      gap: 50px;
-      max-width: 1400px;   /* increased width */
-      width: 90%;          /* make it responsive to viewport */
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1400px;
+      width: 90%;
       padding: 40px;
       background-color: rgba(28, 28, 28, 0.85);
       border-radius: 20px;
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
       z-index: 1;
+      margin-top: 80px; /* push below nav bar */
     }
     
     .card img {
-      width: 450px;   /* larger portrait image */
+      width: 400px;
       height: auto;
       border-radius: 12px;
       border: 3px solid #444;
     }
     
-    .info h1 {
-      font-size: 3rem;  /* slightly larger */
+    .info {
+      flex: 1;
+    }
+
+    .info h2 {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 15px;
     }
     
     .info p {
       font-size: 1.15rem;
-    }
-
-    .links {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-    }
-
-    .links a {
-      color: #66ccff;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-
-    .links a:hover {
-      color: #99ddff;
-      text-decoration: underline;
+      margin-top: 0;
     }
 
   </style>
 </head>
 <body>
+
+  <!-- Navigation bar -->
+  <nav>
+    <div class="nav-left">Greg Svensson</div>
+    <ul>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="Greg Svensson Resume.pdf">Resume</a></li>
+      <li><a href="https://www.linkedin.com/in/greg-svensson-2b920a2a7/">LinkedIn</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="https://baja.mae.cornell.edu/">Baja!</a></li>
+    </ul>
+  </nav>
 
   <!-- Scrolling background -->
   <div class="scroll-container">
@@ -108,19 +149,12 @@
   <div class="card">
     <img src="portrait.jpg" alt="Greg Svensson photo">
     <div class="info">
-      <h1>Greg Svensson</h1>
+      <h2>About Me</h2>
       <p>
         Third year Mechanical and Aerospace Engineering student at Cornell University.  
-        Drivetrain subteam member on Cornell Baja Racing. Strong hands-on experience in mechanical design and machining.
+        Drivetrain subteam member on Cornell Baja Racing. Strong hands-on experience in mechanical design and machining.  
         Seeking internship opportunities in automotive, energy, and aerospace industries.
       </p>
-      <ul class="links">
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="Greg Svensson Resume.pdf">Resume</a></li>
-        <li><a href="https://www.linkedin.com/in/greg-svensson-2b920a2a7/">LinkedIn</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="https://baja.mae.cornell.edu/">Baja!</a></li>
-      </ul>
     </div>
   </div>
 
