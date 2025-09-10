@@ -12,40 +12,40 @@
       height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start; /* align from top now */
       color: #eee;
+      flex-direction: column;
     }
 
-    /* Navigation bar */
-    nav {
+    /* Header section */
+    header {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
+      text-align: center;
       background: rgba(20, 20, 20, 0.9);
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between; /* name left, links right */
-      align-items: center;
+      padding: 20px 0 10px;
       z-index: 10;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
 
-    .nav-left {
-      font-size: 1.5rem;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
       font-weight: 700;
       color: #eee;
     }
 
-    nav ul {
+    header ul {
       list-style: none;
-      margin: 0;
+      margin: 10px 0 0;
       padding: 0;
       display: flex;
-      gap: 25px;
+      justify-content: center;
+      gap: 30px;
     }
 
-    nav a {
+    header a {
       color: #66ccff;
       text-decoration: none;
       font-size: 1.1rem;
@@ -53,7 +53,7 @@
       transition: color 0.2s;
     }
 
-    nav a:hover {
+    header a:hover {
       color: #99ddff;
       text-decoration: underline;
     }
@@ -94,7 +94,7 @@
       border-radius: 20px;
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
       z-index: 1;
-      margin-top: 80px; /* push below nav bar */
+      margin: 160px auto 0; /* push below header */
     }
     
     .card img {
@@ -123,9 +123,9 @@
 </head>
 <body>
 
-  <!-- Navigation bar -->
-  <nav>
-    <div class="nav-left">Greg Svensson</div>
+  <!-- Header -->
+  <header>
+    <h1>Greg Svensson</h1>
     <ul>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="Greg Svensson Resume.pdf">Resume</a></li>
@@ -133,7 +133,7 @@
       <li><a href="#">Contact</a></li>
       <li><a href="https://baja.mae.cornell.edu/">Baja!</a></li>
     </ul>
-  </nav>
+  </header>
 
   <!-- Scrolling background -->
   <div class="scroll-container">
