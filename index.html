@@ -8,26 +8,49 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-image: url('14.jpeg'); /* Replace with your image */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #eee;
+      overflow: hidden;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      color: #eee;
     }
 
+    /* Container for the scrolling images */
+    .scroll-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: flex;
+      flex-direction: column;
+      animation: scrollUp 50s linear infinite;
+    }
+
+    .scroll-container img {
+      width: 100%;
+      height: 100vh; /* each image fills viewport */
+      object-fit: cover;
+    }
+
+    @keyframes scrollUp {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-1000vh); } /* 10 images × 100vh each */
+    }
+
+    /* Main card */
     .card {
       display: flex;
       align-items: center;
       gap: 40px;
       max-width: 1000px;
       padding: 30px;
-      background-color: rgba(28, 28, 28, 0.85); /* semi-transparent so text is readable */
+      background-color: rgba(28, 28, 28, 0.85);
       border-radius: 12px;
       box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      z-index: 1;
     }
 
     .card img {
@@ -70,10 +93,28 @@
     .links a:hover {
       text-decoration: underline;
     }
+
   </style>
 </head>
 <body>
 
+  <!-- Scrolling background -->
+  <div class="scroll-container">
+    <img src="1.jpg" alt="">
+    <img src="2.jpg" alt="">
+    <img src="3.jpg" alt="">
+    <img src="4.jpg" alt="">
+    <img src="5.jpg" alt="">
+    <img src="6.jpg" alt="">
+    <img src="7.jpg" alt="">
+    <img src="8.jpg" alt="">
+    <img src="9.jpg" alt="">
+    <img src="10.jpg" alt="">
+    <!-- Duplicate first image for seamless loop -->
+    <img src="1.jpg" alt="">
+  </div>
+
+  <!-- Main card -->
   <div class="card">
     <img src="portrait.jpg" alt="Greg Svensson photo">
     <div class="info">
