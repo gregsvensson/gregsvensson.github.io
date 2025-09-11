@@ -31,9 +31,14 @@
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 3rem; /* bigger name */
       font-weight: 700;
-      color: #eee;
+      color: #eee; /* not blue */
+    }
+
+    header h1 a {
+      color: #eee; /* ensure link is also not blue */
+      text-decoration: none;
     }
 
     header ul {
@@ -83,43 +88,43 @@
     }
 
     /* Main card */
-  .card {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    max-width: 800px;
-    width: 90%;
-    padding: 30px;
-    background-color: rgba(28, 28, 28, 0.85);
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.7);
-    z-index: 1;
-    margin: 100px auto 0; /* closer to top */
-  }
-  
-  .card img {
-    width: 400px; /* same size as before */
-    height: auto;
-    border-radius: 12px;
-    border: 3px solid #444;
-  }
-  
-  .info {
-    flex: 1;
-    max-width: 350px; /* constrain text box width */
-  }
+    .card {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      max-width: 800px;
+      width: 90%;
+      padding: 30px;
+      background-color: rgba(28, 28, 28, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.7);
+      z-index: 1;
+      margin: 100px auto 0; /* closer to top */
+    }
 
-  .info h2 {
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-  
-  .info p {
-    font-size: 1.05rem;
-    margin-top: 0;
-    line-height: 1.4;
-  }
+    .card img {
+      width: 400px; /* same size as before */
+      height: auto;
+      border-radius: 12px;
+      border: 3px solid #444;
+    }
+
+    .info {
+      flex: 1;
+      max-width: 350px; /* constrain text box width */
+    }
+
+    .info h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .info p {
+      font-size: 1.05rem;
+      margin-top: 0;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -134,7 +139,6 @@
       <li><a href="https://baja.mae.cornell.edu/">Baja!</a></li>
     </ul>
   </header>
-
 
   <!-- Scrolling background -->
   <div class="scroll-container">
