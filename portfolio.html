@@ -6,47 +6,45 @@
   <title>Greg Svensson - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      background-color: #000;
-      color: #eee; /* All main text is white */
-      font-family: 'Roboto', sans-serif;
+    /* General */
+    body, html {
       margin: 0;
       padding: 0;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+      color: #fff;
+      overflow-x: hidden;
     }
 
     header {
-      width: 100%;
-      text-align: center;
-      background: rgba(20,20,20,0.95);
-      padding: 20px 0 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
       position: fixed;
       top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      font-weight: 700;
+      width: 100%;
+      background: rgba(20,20,20,0.95);
+      padding: 20px 0;
+      text-align: center;
+      z-index: 100;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
 
     header h1 a {
-      color: white; /* Header main link red */
+      color: #fff;
       text-decoration: none;
+      font-weight: 700;
+      font-size: 2rem;
     }
 
     header ul {
       list-style: none;
-      margin: 10px 0 0;
       padding: 0;
+      margin: 10px 0 0;
       display: flex;
       justify-content: center;
       gap: 30px;
     }
 
     header ul a {
-      color: red; /* Only header nav links are red */
+      color: red; /* header nav links red */
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
@@ -57,53 +55,88 @@
       text-decoration: underline;
     }
 
-    .content {
-      max-width: 1200px;
-      width: 95%;
-      margin: 150px auto 60px;
+    /* Full page project sections */
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+      box-sizing: border-box;
     }
 
-    h1.page-title {
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 40px;
-      font-weight: 700;
+    /* Alternate backgrounds */
+    section:nth-child(odd) {
+      background-color: #111;
     }
 
-    /* Grid of project thumbnails */
-    .project-grid {
+    section:nth-child(even) {
+      background-color: #222;
+    }
+
+    .project-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 50px;
-    }
-
-    .project-thumb {
-      background-color: rgba(28,28,28,0.85);
-      box-shadow: 0 0 40px rgba(0,0,0,0.7);
-      overflow: hidden;
-      text-decoration: none;
-      color: #eee; /* Keep text inside boxes white */
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .project-thumb:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 50px rgba(0,0,0,0.8);
-    }
-
-    .project-thumb img {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
       width: 100%;
-      height: 280px;
-      object-fit: cover;
-      border: 3px solid #444;
     }
 
-    .project-thumb-title {
-      padding: 25px;
-      font-size: 1.6rem;
-      font-weight: 600;
-      border-top: 2px solid #333;
-      color: #eee; /* Text inside boxes remains white */
+    .project-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .project-info div {
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .objectives {
+      background-color: #dfe5b3;
+      color: #000;
+    }
+
+    .outcomes {
+      background-color: #c8e5c9;
+      color: #000;
+    }
+
+    .technical {
+      background-color: #f0b3b3;
+      color: #000;
+    }
+
+    .project-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-visual img {
+      max-width: 100%;
+      max-height: 80vh;
+      border: 3px solid #444;
+      object-fit: contain;
+    }
+
+    h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .project-container {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -119,31 +152,74 @@
     </ul>
   </header>
 
-  <div class="content">
-    <h1 class="page-title">Projects</h1>
-
-    <div class="project-grid">
-
-      <!-- Project 1 Thumbnail -->
-      <a class="project-thumb" href="project_driveshaft.html">
+  <!-- Project 1 -->
+  <section>
+    <div class="project-container">
+      <div class="project-info">
+        <div class="objectives">
+          <h2>Objectives</h2>
+          <p>Design a lightweight aluminum gun-drilled driveshaft for 4WD Baja vehicle to reduce rotational mass and increase efficiency.</p>
+        </div>
+        <div class="outcomes">
+          <h2>Outcomes & Contributions</h2>
+          <p>Successfully machined and installed the driveshaft; improved drivetrain efficiency and durability.</p>
+        </div>
+        <div class="technical">
+          <h2>Technical Details & Skills</h2>
+          <p>CAD modeling in Fusion 360, CNC machining, material selection for strength-to-weight optimization.</p>
+        </div>
+      </div>
+      <div class="project-visual">
         <img src="alpropshaft.png" alt="Aluminum Driveshaft">
-        <div class="project-thumb-title">Aluminum Gun-Drilled Driveshaft 4WD</div>
-      </a>
-
-      <!-- Project 2 Thumbnail -->
-      <a class="project-thumb" href="project_guarding.html">
-        <img src="4wdguarding_thumbnail.jpg" alt="4WD Guarding">
-        <div class="project-thumb-title">Driveshaft 4WD Guarding</div>
-      </a>
-
-      <!-- Project 3 Thumbnail -->
-      <a class="project-thumb" href="project_calipers.html">
-        <img src="IMG_1402.jpg" alt="Caliper Brackets">
-        <div class="project-thumb-title">Custom Caliper Brackets</div>
-      </a>
-
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- Project 2 -->
+  <section>
+    <div class="project-container">
+      <div class="project-info">
+        <div class="objectives">
+          <h2>Objectives</h2>
+          <p>Design guarding for 4WD driveshafts to prevent debris damage during off-road racing.</p>
+        </div>
+        <div class="outcomes">
+          <h2>Outcomes & Contributions</h2>
+          <p>Installed guards reduced failures and maintenance time during competitions.</p>
+        </div>
+        <div class="technical">
+          <h2>Technical Details & Skills</h2>
+          <p>Sheet metal design, CAD modeling, fabrication, and welding.</p>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="4wdguarding_thumbnail.jpg" alt="4WD Guarding">
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 3 -->
+  <section>
+    <div class="project-container">
+      <div class="project-info">
+        <div class="objectives">
+          <h2>Objectives</h2>
+          <p>Develop custom caliper brackets to allow larger brakes to be fitted onto Baja vehicle.</p>
+        </div>
+        <div class="outcomes">
+          <h2>Outcomes & Contributions</h2>
+          <p>Successfully mounted brakes, increasing braking performance and safety in competition.</p>
+        </div>
+        <div class="technical">
+          <h2>Technical Details & Skills</h2>
+          <p>CAD design, CNC milling, mechanical assembly, and tolerance verification.</p>
+        </div>
+      </div>
+      <div class="project-visual">
+        <img src="IMG_1402.jpg" alt="Caliper Brackets">
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
