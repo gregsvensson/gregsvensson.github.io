@@ -8,7 +8,7 @@
   <style>
     body {
       background-color: #000;
-      color: #eee;
+      color: #eee; /* All main text is white */
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
@@ -32,7 +32,7 @@
     }
 
     header h1 a {
-      color: red;
+      color: red; /* Header main link red */
       text-decoration: none;
     }
 
@@ -45,14 +45,14 @@
       gap: 30px;
     }
 
-    header a {
-      color: red;
+    header ul a {
+      color: red; /* Only header nav links are red */
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
     }
 
-    header a:hover {
+    header ul a:hover {
       color: #ff6666;
       text-decoration: underline;
     }
@@ -82,7 +82,7 @@
       box-shadow: 0 0 40px rgba(0,0,0,0.7);
       overflow: hidden;
       text-decoration: none;
-      color: red;
+      color: #eee; /* Keep text inside boxes white */
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -103,7 +103,7 @@
       font-size: 1.6rem;
       font-weight: 600;
       border-top: 2px solid #333;
-      color: red;
+      color: #eee; /* Text inside boxes remains white */
     }
   </style>
 </head>
@@ -131,7 +131,7 @@
       </a>
 
       <!-- Project 2 Thumbnail -->
-      <a class="project-thumb" href="project_bracket.html">
+      <a class="project-thumb" href="project_guarding.html">
         <img src="4wdguarding_thumbnail.jpg" alt="4WD Guarding">
         <div class="project-thumb-title">Driveshaft 4WD Guarding</div>
       </a>
