@@ -14,11 +14,10 @@
       padding: 0;
     }
 
-    /* Header */
     header {
       width: 100%;
       text-align: center;
-      background: rgba(20, 20, 20, 0.95);
+      background: rgba(20,20,20,0.95);
       padding: 20px 0 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
     }
@@ -47,15 +46,8 @@
       color: #66ccff;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.2s;
     }
 
-    header a:hover {
-      color: #99ddff;
-      text-decoration: underline;
-    }
-
-    /* Content */
     .content {
       max-width: 1200px;
       width: 95%;
@@ -65,79 +57,48 @@
     h1.page-title {
       text-align: center;
       font-size: 3rem;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       font-weight: 700;
     }
 
-    .page-description {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      color: #ccc;
-      font-weight: 300;
+    /* Grid of project thumbnails */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
 
-    /* Projects */
-    .project-card {
+    .project-thumb {
       background-color: #1a1a1a;
       border-radius: 12px;
       box-shadow: 0 0 25px rgba(0,0,0,0.6);
-      padding: 30px;
-      margin-bottom: 50px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #eee;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .project-title {
-      font-size: 1.8rem;
-      margin: 0 0 10px;
-      font-weight: 600;
-      border-bottom: 2px solid #333;
-      padding-bottom: 8px;
+    .project-thumb:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 35px rgba(0,0,0,0.7);
     }
 
-    .project-description {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-      line-height: 1.5;
-      font-weight: 400;
-    }
-
-    ul.project-points {
-      list-style: disc;
-      padding-left: 20px;
-      margin-bottom: 20px;
-      color: #ccc;
-    }
-
-    .project-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .project-images img {
-      border-radius: 8px;
+    .project-thumb img {
+      width: 100%;
+      height: 180px;
       object-fit: cover;
-      flex: 1 1 48%;
-      max-width: 48%;
     }
 
-    .project-images img.full-width {
-      flex: 1 1 100%;
-      max-width: 100%;
-    }
-
-    @media (max-width: 768px) {
-      .project-images img {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
+    .project-thumb-title {
+      padding: 15px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-top: 2px solid #333;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1><a href="index.html">Greg Svensson</a></h1>
     <ul>
@@ -148,86 +109,29 @@
     </ul>
   </header>
 
-  <!-- Page content -->
   <div class="content">
     <h1 class="page-title">Projects</h1>
-    <p class="page-description">
-      A collection of engineering projects, including independent work and contributions to Cornell Baja Racing.
-    </p>
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      <h2 class="project-title">Aluminum Gun-Drilled Driveshaft 4WD</h2>
-      <p class="project-description">
-        Currently designing the driveshaft 4WD system for Cornell Baja Racing’s next vehicle: TG22. Project focuses on improving reliability, manufacturability, and serviceability while reducing weight and complexity.
-      </p>
-      <ul class="project-points">
-        <li>System-level switch from carbon fiber to gun-drilled aluminum shafts in order to improve confidence in analysis, decrease manufacturing times, improve clearances, and simplify system design</li>
-        <li>Achieved a projected subsystem weight reduction of over 15%</li>
-        <li>Eliminated the need for a third universal joint by optimizing shaft misalignment geometry and testing on legacy vehicle</li>
-        <li>Performed ANSYS FEA and modal analysis simulations to validate component load cases and shaft critical speeds</l>
-        <li>Splined, removable yokes with reduced length to improve serviceability and clearances</li>
-        <li>Contains removable shear pin hub designed with the driveline’s minimum FOS to protect critical components from shock loads</l>
-      </ul>
-        <div class="project-images">
-          <img src="alpropshaft.png" alt="" class="full-width">
-        </div>
-    </div>
+    <div class="project-grid">
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <h2 class="project-title">Driveshaft 4WD Guarding</h2>
-      <p class="project-description">
-        Designed and manufactured the four-wheel drive driveshaft guarding on TG21.
-      </p>
-      <ul class="project-points">
-        <li>Massively improved subsystem serviceability</li>
-        <li>Maintained subsystem weight despite increased size requirements</li>
-        <li>Personally fabricated every component in-house using TIG welding, manual machining, power tools, and 3D printing</li>
-      </ul>
-    
-      <div class="project-images">
-        <!-- Bottom row:-->
-        <iframe src="gas273_4WDGuarding_SP25.pdf#navpanes=0&toolbar=0&scrollbar=0"
-                style="width:100%; height:700px; border:none; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.5);">
-        </iframe>
-  
-      </div>
-    </div>
-    
-    <!-- Project 3 -->
-    <div class="project-card">
-      <h2 class="project-title">Custom Caliper Brackets</h2>
-      <p class="project-description">
-        Designed and manufactured front caliper brackets for a Camaro restoration project to adapt aftermarket calipers to the OEM knuckle
-      </p>
-      <ul class="project-points">
-        <li>Found a vague schematic online and translated it into a functional design</li>
-        <li>Created CAD in SolidWorks and CAM in HSMWorks</li>
-        <li>Manufactured the brackets on a 3-axis CNC machine</li>
-      </ul>
-      <div class="project-images">
-        <img src="IMG_1402.jpg" alt="Finished Bracket">
-        <img src="IMG_0175.jpg" alt="Bracket Installed on Brakes">
-      </div>
-    </div>
+      <!-- Project 1 Thumbnail -->
+      <a class="project-thumb" href="project_driveshaft.html">
+        <img src="alpropshaft.png" alt="Aluminum Driveshaft">
+        <div class="project-thumb-title">Aluminum Gun-Drilled Driveshaft 4WD</div>
+      </a>
 
-    <!-- Project 4 -->
-    <div class="project-card">
-      <h2 class="project-title">Steam Engine CAD Model</h2>
-      <p class="project-description">
-        Created a 3D model of a single-cylinder steam engine in SolidWorks to practice CAD skills
-      </p>
-      <ul class="project-points">
-        <li>Worked from a vague schematic and filled in missing dimensions where needed</li>
-        <li>Built individual parts and assembled them with moving joints to simulate engine motion</li>
-        <li>Used the project to practice SolidWorks part modeling, assemblies, and constraints</li>
-      </ul>
-      <div class="project-images">
-        <img src="Untitled Project.jpg" alt="Rendered Steam Engine">
-        <img src="caddsteamie.png" alt="SolidWorks CAD Model">
-        <img src="steamschematic.png" alt="Steam Engine Schematic" class="full-width">
-      </div>
+      <!-- Project 2 Thumbnail -->
+      <a class="project-thumb" href="project_guarding.html">
+        <img src="4wdguarding_thumbnail.jpg" alt="4WD Guarding">
+        <div class="project-thumb-title">Driveshaft 4WD Guarding</div>
+      </a>
+
+      <!-- Project 3 Thumbnail -->
+      <a class="project-thumb" href="project_calipers.html">
+        <img src="IMG_1402.jpg" alt="Caliper Brackets">
+        <div class="project-thumb-title">Custom Caliper Brackets</div>
+      </a>
+
     </div>
 
   </div>
