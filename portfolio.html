@@ -16,35 +16,40 @@
       overflow-x: hidden;
     }
 
+    /* Header identical to index page */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(20,20,20,0.95);
-      padding: 20px 0;
       text-align: center;
-      z-index: 100;
+      background: rgba(20, 20, 20, 0.95);
+      padding: 20px 0 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
     }
 
     header h1 a {
-      color: #fff;
+      color: white;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 2rem;
     }
 
     header ul {
       list-style: none;
-      padding: 0;
       margin: 10px 0 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       gap: 30px;
     }
 
     header ul a {
-      color: red; /* header nav links red */
+      color: red;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s;
@@ -55,7 +60,7 @@
       text-decoration: underline;
     }
 
-    /* Full page project sections */
+    /* Full-page project sections */
     section {
       min-height: 100vh;
       display: flex;
@@ -65,7 +70,7 @@
       box-sizing: border-box;
     }
 
-    /* Alternate backgrounds */
+    /* Alternate dark backgrounds */
     section:nth-child(odd) {
       background-color: #111;
     }
@@ -74,6 +79,7 @@
       background-color: #222;
     }
 
+    /* Project layout */
     .project-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -89,23 +95,18 @@
     }
 
     .project-info div {
-      padding: 20px;
-      border-radius: 4px;
+      padding: 0; /* No background, no border-radius */
     }
 
-    .objectives {
-      background-color: #dfe5b3;
-      color: #000;
+    .project-info h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.8rem;
     }
 
-    .outcomes {
-      background-color: #c8e5c9;
-      color: #000;
-    }
-
-    .technical {
-      background-color: #f0b3b3;
-      color: #000;
+    .project-info p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .project-visual {
@@ -119,17 +120,6 @@
       max-height: 80vh;
       border: 3px solid #444;
       object-fit: contain;
-    }
-
-    h2 {
-      margin: 0 0 10px 0;
-      font-size: 1.8rem;
-    }
-
-    p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.5;
     }
 
     /* Responsive */
@@ -156,15 +146,15 @@
   <section>
     <div class="project-container">
       <div class="project-info">
-        <div class="objectives">
+        <div>
           <h2>Objectives</h2>
           <p>Design a lightweight aluminum gun-drilled driveshaft for 4WD Baja vehicle to reduce rotational mass and increase efficiency.</p>
         </div>
-        <div class="outcomes">
+        <div>
           <h2>Outcomes & Contributions</h2>
           <p>Successfully machined and installed the driveshaft; improved drivetrain efficiency and durability.</p>
         </div>
-        <div class="technical">
+        <div>
           <h2>Technical Details & Skills</h2>
           <p>CAD modeling in Fusion 360, CNC machining, material selection for strength-to-weight optimization.</p>
         </div>
@@ -179,15 +169,15 @@
   <section>
     <div class="project-container">
       <div class="project-info">
-        <div class="objectives">
+        <div>
           <h2>Objectives</h2>
           <p>Design guarding for 4WD driveshafts to prevent debris damage during off-road racing.</p>
         </div>
-        <div class="outcomes">
+        <div>
           <h2>Outcomes & Contributions</h2>
           <p>Installed guards reduced failures and maintenance time during competitions.</p>
         </div>
-        <div class="technical">
+        <div>
           <h2>Technical Details & Skills</h2>
           <p>Sheet metal design, CAD modeling, fabrication, and welding.</p>
         </div>
@@ -202,15 +192,15 @@
   <section>
     <div class="project-container">
       <div class="project-info">
-        <div class="objectives">
+        <div>
           <h2>Objectives</h2>
           <p>Develop custom caliper brackets to allow larger brakes to be fitted onto Baja vehicle.</p>
         </div>
-        <div class="outcomes">
+        <div>
           <h2>Outcomes & Contributions</h2>
           <p>Successfully mounted brakes, increasing braking performance and safety in competition.</p>
         </div>
-        <div class="technical">
+        <div>
           <h2>Technical Details & Skills</h2>
           <p>CAD design, CNC milling, mechanical assembly, and tolerance verification.</p>
         </div>
