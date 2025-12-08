@@ -107,7 +107,15 @@
       border: none;
     }
 
-    /* MAE3270: images large, side-by-side */
+    /* MAE3270 images larger */
+    .mae3270-images img:first-child {
+      width: 33vw; /* 10% bigger */
+    }
+
+    .mae3270-images img:last-child {
+      width: 60vw; /* 10% bigger */
+    }
+
     .mae3270-images {
       display: flex;
       gap: 20px;
@@ -120,14 +128,6 @@
       height: auto;
       object-fit: contain;
       border: none !important;
-    }
-
-    .mae3270-images img:first-child {
-      width: 30vw; /* smaller left */
-    }
-
-    .mae3270-images img:last-child {
-      width: 55vw; /* larger right */
     }
 
     @media (max-width: 900px) {
@@ -213,7 +213,7 @@
     </div>
   </section>
 
-  <!-- MAE3270 Updated -->
+  <!-- MAE3270 -->
   <section>
     <div class="project-container" style="display: block; text-align: center;">
       <div class="project-info">
