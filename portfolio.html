@@ -117,10 +117,17 @@
     }
 
     .mae3270-images img {
-      width: 45vw;
       height: auto;
       object-fit: contain;
       border: none !important;
+    }
+
+    .mae3270-images img:first-child {
+      width: 30vw; /* smaller left */
+    }
+
+    .mae3270-images img:last-child {
+      width: 55vw; /* larger right */
     }
 
     @media (max-width: 900px) {
