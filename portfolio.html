@@ -6,7 +6,6 @@
   <title>Greg Svensson - Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <style>
-    /* General */
     body, html {
       margin: 0;
       padding: 0;
@@ -16,7 +15,6 @@
       overflow-x: hidden;
     }
 
-    /* Header identical to index page */
     header {
       position: fixed;
       top: 0;
@@ -60,7 +58,6 @@
       text-decoration: underline;
     }
 
-    /* Full-page project sections */
     section {
       min-height: 100vh;
       display: flex;
@@ -70,7 +67,6 @@
       box-sizing: border-box;
     }
 
-    /* Alternate dark backgrounds */
     section:nth-child(odd) {
       background-color: #111;
     }
@@ -79,7 +75,6 @@
       background-color: #222;
     }
 
-    /* Project layout */
     .project-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -94,10 +89,6 @@
       gap: 20px;
     }
 
-    .project-info div {
-      padding: 0; /* No background, no border-radius */
-    }
-
     .project-info h2 {
       margin: 0 0 10px 0;
       font-size: 1.8rem;
@@ -109,23 +100,38 @@
       line-height: 1.5;
     }
 
-    .project-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     .project-visual img {
       max-width: 100%;
       max-height: 80vh;
-      border: 3px solid #444;
       object-fit: contain;
+      border: none;
     }
 
-    /* Responsive */
+    /* MAE3270: images large, side-by-side */
+    .mae3270-images {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .mae3270-images img {
+      width: 48%;
+      height: auto;
+      object-fit: contain;
+      border: none !important;
+    }
+
     @media (max-width: 900px) {
       .project-container {
         grid-template-columns: 1fr;
+      }
+      .mae3270-images {
+        flex-direction: column;
+      }
+      .mae3270-images img {
+        width: 100%;
       }
     }
   </style>
@@ -142,52 +148,50 @@
     </ul>
   </header>
 
-<!-- Project 1 -->
-<section>
-  <div class="project-container" style="display: block; text-align: center;">
-    <div class="project-visual" style="margin-bottom: 30px;">
-      <img src="alpropshaft.png" alt="Aluminum Driveshaft" style="max-width: 80%; max-height: 80vh; border: 3px solid #444;">
-    </div>
-    <div class="project-info">
-      <div>
-        <h2>Baja SAE 4WD Propshaft</h2>
-        <p>Designed 4WD Propshaft system for Cornell Baja Racing</p>
+  <!-- Project 1 -->
+  <section>
+    <div class="project-container" style="display: block; text-align: center;">
+      <div class="project-visual" style="margin-bottom: 30px;">
+        <img src="alpropshaft.png" alt="Aluminum Driveshaft" style="max-width: 80%; max-height: 80vh; border: none;">
       </div>
+      <div class="project-info">
+        <div>
+          <h2>Baja SAE 4WD Propshaft</h2>
+          <p>Designed 4WD Propshaft system for Cornell Baja Racing</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Project 2 -->
-<section>
-  <div class="project-container">
-    <div class="project-info">
-      <div>
-        <h2>Objectives</h2>
-        <p>Design guarding for 4WD driveshafts to prevent debris damage during off-road racing.</p>
+  <!-- Project 2 -->
+  <section>
+    <div class="project-container">
+      <div class="project-info">
+        <div>
+          <h2>Objectives</h2>
+          <p>Design guarding for 4WD driveshafts to prevent debris damage during off-road racing.</p>
+        </div>
+        <div>
+          <h2>Outcomes & Contributions</h2>
+          <p>Installed guards reduced failures and maintenance time during competitions.</p>
+        </div>
+        <div>
+          <h2>Technical Details & Skills</h2>
+          <p>Sheet metal design, CAD modeling, fabrication, and welding.</p>
+        </div>
       </div>
-      <div>
-        <h2>Outcomes & Contributions</h2>
-        <p>Installed guards reduced failures and maintenance time during competitions.</p>
-      </div>
-      <div>
-        <h2>Technical Details & Skills</h2>
-        <p>Sheet metal design, CAD modeling, fabrication, and welding.</p>
+      <div class="project-visual">
+        <iframe 
+          src="gas273_4WDGuarding_SP25.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+          width="100%" 
+          height="600px" 
+          style="border: none;">
+        </iframe>
       </div>
     </div>
-    <div class="project-visual">
-      <!-- Embed PDF without toolbar, sidebar, or scrollbars -->
-      <iframe 
-        src="gas273_4WDGuarding_SP25.pdf#toolbar=0&navpanes=0&scrollbar=0" 
-        width="100%" 
-        height="600px" 
-        style="border: 3px solid #444;">
-      </iframe>
-    </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Project 3 -->
+  <!-- MAE3260 -->
   <section>
     <div class="project-container">
       <div class="project-info">
@@ -202,26 +206,22 @@
     </div>
   </section>
 
-  <!-- 3270 -->
+  <!-- MAE3270 Updated -->
   <section>
-    <div class="project-container">
-    
+    <div class="project-container" style="display: block; text-align: center;">
       <div class="project-info">
         <h2>Torque Wrench Design Project (MAE3270)</h2>
-        <p>
-        Designed and analyzed a torque wrench. Final project for MAE3270 - Mechanics of Engineering Materials
-        </p>
+        <p>Designed and analyzed a torque wrench. Final project for MAE3270 - Mechanics of Engineering Materials.</p>
       </div>
 
-      <div class="project-visual two-images">
+      <div class="mae3270-images">
         <img src="wrenchdesign.png" alt="Torque Wrench Image 1">
         <img src="Screenshot 2025-12-07 215306.png" alt="Torque Wrench Image 2">
       </div>
-
     </div>
   </section>
 
-  <!-- 3230 -->
+  <!-- MAE3230 -->
   <section>
     <div class="project-container">
       <div class="project-info">
@@ -236,28 +236,5 @@
     </div>
   </section>
 
-    <!-- Caliper Bracket -->
-  <section>
-    <div class="project-container">
-      <div class="project-info">
-        <div>
-          <h2>Objectives</h2>
-          <p>Develop custom caliper brackets to allow larger brakes to be fitted onto Baja vehicle.</p>
-        </div>
-        <div>
-          <h2>Outcomes & Contributions</h2>
-          <p>Successfully mounted brakes, increasing braking performance and safety in competition.</p>
-        </div>
-        <div>
-          <h2>Technical Details & Skills</h2>
-          <p>CAD design, CNC milling, mechanical assembly, and tolerance verification.</p>
-        </div>
-      </div>
-      <div class="project-visual">
-        <img src= alt=  >
-      </div>
-    </div>
-  </section>
-  
 </body>
 </html>
